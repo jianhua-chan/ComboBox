@@ -1,33 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>ÀûÓÃEasyUIÊµÏÖ¶àÑ¡ÏÂÀ­¿ò</title>
+    <title>åˆ©ç”¨EasyUIå®ç°å¤šé€‰ä¸‹æ‹‰æ¡†</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="EasyUI/easyui.css" />
     <script type="text/javascript" src="EasyUI/jquery.min.js"></script>
     <script type="text/javascript" src="EasyUI/jquery.easyui.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $('#ddlLine').combotree({
-                valueField: "id", //Value×Ö¶Î
-                textField: "text", //Text×Ö¶Î
+                valueField: "id", //Valueå­—æ®µ
+                textField: "text", //Textå­—æ®µ
                 multiple: true,
                 data: [{ "id": 1, "text": "All", "children": [{ "id": 13, "text": "C1" }, { "id": 14, "text": "C2" }, { "id": 15, "text": "C3"}]}]
 ,
-                //                url: "tree_data2.json", //Êı¾İÔ´
+                //                url: "tree_data2.json", //æ•°æ®æº
                 onCheck: function (node, checked) {
-                    //ÈÃÈ«Ñ¡²»ÏÔÊ¾
-                    $("#ddlLine").combotree("setText", $("#ddlLine").combobox("getText").toString().replace("È«Ñ¡,", ""));
+                    //è®©å…¨é€‰ä¸æ˜¾ç¤º
+                    $("#ddlLine").combotree("setText", $("#ddlLine").combobox("getText").toString().replace("å…¨é€‰,", ""));
                 },
                 onClick: function (node, checked) {
-                    //ÈÃÈ«Ñ¡²»ÏÔÊ¾
-                    $("#ddlLine").combotree("setText", $("#ddlLine").combobox("getText").toString().replace("È«Ñ¡,", ""));
+                    //è®©å…¨é€‰ä¸æ˜¾ç¤º
+                    $("#ddlLine").combotree("setText", $("#ddlLine").combobox("getText").toString().replace("å…¨é€‰,", ""));
                 }
             });
         })
     </script>
 </head>
 <body>
-    ¶àÑ¡£º<select id="ddlLine" class="easyui-combotree" style="width: 205px; height: 24px;">
+    å¤šé€‰ï¼š<select id="ddlLine" class="easyui-combotree" style="width: 205px; height: 24px;">
     </select>
 </body>
 </html>
